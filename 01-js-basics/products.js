@@ -23,15 +23,21 @@ const products = [
 ]
 
 function getAvailableProducts(products) {
-  // вернуть только товары, которые есть в наличии
+  return products.filter(function (product) {
+    return product.inStock === true
+  })
 }
 
 function getProductNames(products) {
-  // вернуть массив только с названиями товаров
+  return products.map(function (product) {
+    return product.name
+  })
 }
 
 function getTotalPrice(products) {
   // вернуть сумму цен всех товаров
+  const total = products.reduce((sum, item) => sum + item.price, 0);
+  return total
 }
 
 console.log(getAvailableProducts(products))
