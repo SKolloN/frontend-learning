@@ -40,6 +40,13 @@ function getTotalPrice(products) {
   return total
 }
 
+function getAnimeProducts(products) {
+  return products.filter(function (product){
+    return product.category === "anime"
+  })
+}
+
 console.log(getAvailableProducts(products))
 console.log(getProductNames(products))
 console.log(getTotalPrice(products))
+console.log(getAnimeProducts(products))
