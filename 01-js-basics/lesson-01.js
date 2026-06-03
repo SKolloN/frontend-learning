@@ -1,5 +1,5 @@
 const productTitle = "Naruto Figure";
-const productPrice = "23000";
+const productPrice = 23000;
 const productCategory = "anime";
 const isAvailable = true;
 
